@@ -1,44 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Ember js opt group select by davidov</title>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Ember js opt group select : Example of how to generate an Ember select with option group(s)" />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Ember js opt group select</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Ember js opt group select</h1>
-        <p>Example of how to generate an Ember select with option group(s)</p>
 
-        <p class="view"><a href="https://github.com/davidov/ember_js_opt_group_select">View the Project on GitHub <small>davidov/ember_js_opt_group_select</small></a></p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/davidov/ember_js_opt_group_select">View on GitHub</a>
 
+          <h1 id="project_title">Ember js opt group select</h1>
+          <h2 id="project_tagline">Example of how to generate an Ember select with option group(s)</h2>
 
-        <ul>
-          <li><a href="https://github.com/davidov/ember_js_opt_group_select/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/davidov/ember_js_opt_group_select/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/davidov/ember_js_opt_group_select">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/davidov/ember_js_opt_group_select/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/davidov/ember_js_opt_group_select/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>
 <a name="ember_js_opt_group_select" class="anchor" href="#ember_js_opt_group_select"><span class="octicon octicon-link"></span></a>ember_js_opt_group_select</h1>
 
 <p>Example of how to generate an Ember select with option group(s)</p>
+
+<p>In order to create an Ember.js based Opt group control you need to add to Ember extenders (not handlebars helpers) listed in file ember-extend.js
+These extenders originate from rhe following gist: <a href="https://gist.github.com/tpitale/3297425">https://gist.github.com/tpitale/3297425</a></p>
+
+<p>They extend the Ember.Select control by handling the option groups and supply an Ember.View extender to the option group themselves.</p>
+
+<p>The main app.js file include a View which initializes the Application main view.
+In this view we set three major components:</p>
+
+<ol>
+<li><p>The "groupedOptions" Array which includes the title-value pairs that we'll eventually use inside the Select box. Note that grouped option in this array is an Ember object that holds a 'label' and a 'content'.
+The 'content' part includes an internal Ember Array which holds the actual title value pairs.
+The sample also includes a special Ember.Object (App.GroupedOption) which may be used later to obtain the actual selected title value pair.
+The 'label' part holds the group name</p></li>
+<li><p>The 'flattenedGroupedOptions' is a simple array that holds all the title value pairs as in a regular Ember.Select object (this is the hack)</p></li>
+<li><p>The 'groupedSelectedCtrl' is using our extended Ember.GroupedSelect object and it is the object that eventually does the Opt group for us.</p></li>
+</ol>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/davidov">davidov</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Ember js opt group select maintained by <a href="https://github.com/davidov">davidov</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
     
+
   </body>
 </html>
